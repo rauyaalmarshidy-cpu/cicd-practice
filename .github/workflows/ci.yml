@@ -17,8 +17,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run the app
-        run: python app.py
+      - name: Install dependencies
+        run: pip install pytest
+
+      - name: Run tests
+        run: pytest
+
 
 
 

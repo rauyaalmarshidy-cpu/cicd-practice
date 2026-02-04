@@ -12,7 +12,13 @@ jobs:
       - name: Get the code
         uses: actions/checkout@v4
 
-      - name: Say hello
-        run: echo "CI fixed"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run the app
+        run: python app.py
+
 
 
